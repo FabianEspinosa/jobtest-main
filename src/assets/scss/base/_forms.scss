@@ -1,0 +1,95 @@
+/*=============== FORMS ===============*/
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+textarea {
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+textarea,
+select {
+    width: 100%;
+    height: auto;
+    padding: .5rem 1rem;
+    background-color: $bg-input;
+    border: none;
+    border-radius: $border-radius;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: all .5s;
+    &:focus {
+        background-color: $bg-input-focus;
+        border: none;
+        outline: 0;
+    }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    display: inline-block;
+    margin-right: .3rem;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+}
+
+label,
+legend {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: $font-weight-medium;
+}
+
+legend {
+    background-color: $bg-input;
+    padding: .5rem;
+    border-radius: $border-radius;
+}
+
+fieldset {
+    padding: 1rem;
+    background-color: lighten($bg-input, 5%);
+    border: none;
+    border-radius: $border-radius;
+    margin-bottom: 1rem;
+}
+
+textarea {
+    min-height: 7rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+form,
+.form {
+    &__group {
+        margin: 1rem 0;
+    }
+}

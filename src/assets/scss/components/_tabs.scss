@@ -1,0 +1,86 @@
+/*=============== TABS ===============*/
+
+.tabs {
+
+    margin-bottom: $m-1-5;
+
+    &__nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: .2rem;
+        margin-bottom: .2rem;
+        width: 100%;
+        list-style-type: none;
+
+        @media (min-width: map-get($breakpoints, medium)) {
+            flex-direction: row;
+            margin-bottom: 0;
+        }
+
+        &.is-full {
+            >li {
+              flex: 1 1 auto;   
+            }   
+        }
+
+        >li {
+            margin-bottom: 0;
+            >a {
+                display: block;
+                font-size: 1rem;
+                font-weight: 700;
+                padding: 1rem;
+                border-radius: $border-radius;
+                background-color: $bg-tab-button;
+                color: $color-muted;
+                min-width: 6rem;
+                text-align: center;
+
+                @media (min-width: map-get($breakpoints, medium)) {
+                    border-radius: $border-radius $border-radius 0 0;
+                }
+
+                &:hover {
+                    color: $color-text;
+                    background-color: $bg-tab;
+                }
+            }
+
+            &.active {
+
+                >a,
+                >a:hover,
+                >a:focus {
+                    color: $color-text;
+                    cursor: pointer;
+                    background-color: $bg-tab;
+                }
+            }
+        }
+    }
+
+    &__content {
+        width: 100%;
+
+        >.tab__pane {
+            display: none;
+
+            &.active {
+                display: block;
+                padding: 2rem;
+                background-color: $bg-tab;
+                border-radius: $border-radius;
+
+                @media (min-width: map-get($breakpoints, medium)) {
+                    border-radius: 0 $border-radius $border-radius $border-radius;
+                }
+            }
+        }
+
+        >.active {
+            display: block;
+        }
+    }
+
+}

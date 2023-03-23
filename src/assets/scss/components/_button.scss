@@ -1,0 +1,192 @@
+/*=============== BUTTONS ===============*/
+
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+  background-color: $bg-button;
+  border-radius: $border-radius-button;
+  border: none;
+  color: $color-button;
+  display: inline-block;
+  font-size: $font-size-body;
+  font-weight: $font-weight-regular;
+  padding: 10px 19px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s;
+  vertical-align: middle;
+
+  &:focus {
+    background-color: $bg-button-hover;
+    color: $color-button-hover;
+  }
+
+  &:hover {
+    background-color: $bg-button-hover;
+    color: $color-button-hover;
+  }
+}
+
+.button {
+  &__group {
+    display: flex;
+    gap: $gap-small;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+
+  &__outline {
+    background-color: transparent;
+    color: $bg-button;
+    border: 2px solid $bg-button;
+
+    &:hover {
+      background-color: transparent;
+      color: $bg-button-hover;
+      border: 2px solid $bg-button-hover;
+    }
+  }
+
+  &__secondary {
+    background-color: $bg-button-secondary;
+    color: $color-button;
+
+    &:hover {
+      background-color: $bg-button-secondary-hover;
+      color: $color-button-hover;
+    }
+
+    &__outline {
+      background: #b4d9ef;
+      border: 1px solid #0b3045;
+      color: #0b3045;
+    }
+  }
+
+  &__success {
+    background-color: $color-success;
+    color: $color-button;
+
+    &:hover {
+      background-color: darken($color-success, 15%);
+      color: $color-button-hover;
+    }
+  }
+
+  &__info {
+    background-color: $color-info;
+    color: $color-button;
+
+    &:hover {
+      background-color: darken($color-info, 15%);
+      color: $color-button-hover;
+    }
+  }
+
+  &__warning {
+    background-color: $color-warning;
+    color: $color-button;
+
+    &:hover {
+      background-color: darken($color-warning, 15%);
+      color: $color-button-hover;
+    }
+  }
+
+  &__danger {
+    background-color: $color-danger;
+    color: $color-brand-red;
+
+    &:hover {
+      background-color: darken($color-danger, 15%);
+      color: $color-white;
+    }
+  }
+
+  &__white {
+    background-color: $color-white;
+    color: $color-link;
+
+    &:hover {
+      background-color: darken($color-white, 10%);
+      color: $color-link;
+    }
+  }
+
+  &__light {
+    background-color: $color-light;
+    color: $color-link;
+
+    &:hover {
+      background-color: darken($color-light, 15%);
+      color: $color-link;
+    }
+  }
+
+  &__gray {
+    background-color: $color-gray;
+    color: $color-button;
+
+    &:hover {
+      background-color: darken($color-gray, 15%);
+      color: $color-button-hover;
+    }
+  }
+
+  &__dark {
+    background-color: $color-dark;
+    color: $color-button;
+
+    &:hover {
+      background-color: darken($color-dark, 15%);
+      color: $color-button-hover;
+    }
+  }
+
+  &__muted {
+    cursor: not-allowed;
+    pointer-events: none;
+    background-color: $color-muted;
+    color: lighten($color-muted, 15%);
+
+    &:hover {
+      background-color: $color-muted;
+      color: lighten($color-muted, 15%);
+    }
+  }
+
+  &--big {
+    padding: 1rem 1.5rem;
+    font-size: $font-size-h3;
+  }
+
+  &--small {
+    padding: 0.3rem 0.5rem;
+    font-size: $font-size-small;
+  }
+
+  &--block {
+    display: block;
+    margin: auto;
+    width: 100%;
+  }
+
+  &--icon {
+    background-color: transparent;
+    color: $color-text;
+    font-size: 3rem;
+
+    &:hover,
+    &:focus,
+    &.active {
+      background-color: transparent;
+      color: $color-text;
+    }
+  }
+
+  &--icon-close {
+    font-size: 2rem;
+  }
+}

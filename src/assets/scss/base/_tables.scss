@@ -1,0 +1,41 @@
+/*=============== TABLE ===============*/
+
+table,
+.table {
+    border-collapse: collapse;
+    width: 100%;
+
+    thead,
+    th {
+        font-weight: $font-weight-bold;
+    }
+
+    th,
+    td {
+        padding: 1rem 1.5rem;
+        text-align: left;
+        border-bottom: 1px solid $color-light;
+    }
+
+    th:first-child,
+    td:first-child {
+        padding-left: 0;
+    }
+
+    th:last-child,
+    td:last-child {
+        padding-right: 0;
+    }
+}
+
+.table {
+    &-hover {
+        tr:hover {
+            background-color: rgba($color-light, .1);
+        }
+    }
+
+    &-responsive {
+        overflow-x: auto;
+    }
+}

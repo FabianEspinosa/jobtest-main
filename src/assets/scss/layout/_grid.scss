@@ -1,0 +1,193 @@
+/*=============== GRID ===============*/
+
+.grid {
+  display: grid;
+  gap: $gap-small;
+
+  &+.grid {
+    margin-top: $gap-small;
+  }
+
+  @media (min-width: map-get($breakpoints, medium)) {
+    gap: $gap;
+
+    &+.grid {
+      margin-top: $gap;
+    }
+  }
+}
+
+.grid-min {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax($min-col-width, 1fr));
+  gap: $gap-small;
+
+  &+.grid-min {
+    margin-top: $gap-small;
+  }
+
+  @media (min-width: map-get($breakpoints, medium)) {
+    gap: $gap;
+
+    &+.grid-min {
+      margin-top: $gap;
+    }
+  }
+}
+
+@for $i from 1 through $grid-columns {
+  .grid-col-#{$i} {
+    grid-template-columns: repeat(#{$i}, 1fr);
+  }
+
+  .grid-span-#{$i} {
+    grid-column: span #{$i};
+  }
+}
+
+@media (min-width: map-get($breakpoints, small)) {
+  @for $i from 1 through $grid-columns {
+    .grid-col-sm-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    .grid-span-sm-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, medium)) {
+  @for $i from 1 through $grid-columns {
+    .grid-col-md-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    .grid-span-md-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, large)) {
+  @for $i from 1 through $grid-columns {
+    .grid-col-lg-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    .grid-span-lg-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+@media (min-width: map-get($breakpoints, extra-large)) {
+  @for $i from 1 through $grid-columns {
+    .grid-col-xl-#{$i} {
+      grid-template-columns: repeat(#{$i}, 1fr);
+    }
+
+    .grid-span-xl-#{$i} {
+      grid-column: span #{$i};
+    }
+  }
+}
+
+
+.grid {
+
+  &-center-vertical {
+    align-items: center
+  }
+
+  &-align-center {
+    align-items: stretch
+  }
+
+  &-align-start {
+    align-items: start
+  }
+
+  &-align-end {
+    align-items: end
+  }
+
+  &-align-center {
+    align-items: center
+  }
+
+  // Applied to the grid container
+  &-content-start {
+    align-content: start;
+  }
+
+  &-content-end {
+    align-content: end;
+  }
+
+  &-content-center {
+    align-content: center;
+  }
+
+  &-content-stretch {
+    align-content: stretch;
+  }
+
+  &-content-around {
+    align-content: space-around;
+  }
+
+  &-content-between {
+    align-content: space-between;
+  }
+
+  &-content-evenly {
+    align-content: space-evenly;
+  }
+
+  &-justify-center {
+    justify-content: center;
+  }
+
+  &-justify-start {
+    justify-content: start;
+  }
+
+  &-justify-end {
+    justify-content: end;
+  }
+
+  &-justify-between {
+    justify-content: space-between
+  }
+
+  &-justify-around {
+    justify-content: space-around
+  }
+
+  &-justify-evenly {
+    justify-content: space-evenly
+  }
+
+  &-justify-stretch {
+    justify-content: stretch
+  }
+}
+
+.justify {
+  &-items-stretch {
+    justify-items: stretch;
+  }
+
+  &-items-start {
+    justify-items: start;
+  }
+
+  &-items-end {
+    justify-items: end;
+  }
+
+  &-items-center {
+    justify-items: center;
+  }
+}

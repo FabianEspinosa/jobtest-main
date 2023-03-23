@@ -1,0 +1,194 @@
+// -----------------------------------------------------------------------------
+// VARIABLES
+// -----------------------------------------------------------------------------
+
+$color-brand-blue: #6cb8e7;
+$color-brand-marine: #0b3045;
+$color-brand-green: #b6c931;
+$color-brand-red: #eb4765;
+$color-brand-pink: #ffbfbf;
+
+$color-brand-celeste: #b4d9ef;
+
+$color-brand-orange: #f28e00;
+$color-brand-orange-light: #ffeacd;
+
+$color-brand-green-dark: #809208;
+$color-brand-green-light: #f7ffbf;
+
+$color-brand-gray: #354f5e;
+$color-brand-gray-light: #c8c9ca;
+
+//*========== Colors ==========*/
+$color-primary: $color-brand-marine;
+$color-secondary: $color-brand-blue;
+$color-success: $color-brand-green;
+$color-info: $color-brand-blue;
+$color-warning: #dfd157;
+$color-danger: $color-brand-pink;
+$color-white: #fff;
+$color-light: lighten($color-brand-blue, 10%);
+$color-gray: $color-brand-gray;
+$color-gray-light: $color-brand-gray-light;
+$color-gray-dark: #333;
+$color-dark: $color-brand-marine;
+$color-black: #000000;
+
+$color-title: $color-primary;
+$color-text: $color-dark;
+$color-link: $color-primary;
+$color-link-menu: $color-primary;
+$color-link-hover: lighten($color-primary, 10%);
+$color-muted: $color-gray;
+$color-button: $color-white;
+$color-button-hover: $color-white;
+$color-text-footer: $color-primary;
+
+$bg-body: $color-white;
+$bg-input: $color-light;
+$bg-input-focus: darken($color-light, 10%);
+$bg-button: $color-primary;
+$bg-button-hover: lighten($color-primary, 30%);
+$bg-overlay: rgba($color-black, 0.7);
+$bg-loader: $color-white;
+$bg-tab: $color-light;
+$bg-tab-button: darken($color-light, 10%);
+$bg-footer: transparent;
+$bg-header: transparent;
+$bg-hero: $color-light;
+$bg-alert: $color-brand-celeste;
+
+$bg-button-secondary: $color-secondary;
+$bg-button-secondary-hover: lighten($color-secondary, 10%);
+
+$colors: (
+  primary: $color-primary,
+  secondary: $color-secondary,
+  success: $color-success,
+  info: $color-info,
+  warning: $color-warning,
+  danger: $color-danger,
+  white: $color-white,
+  light: $color-light,
+  gray: $color-gray,
+  gray-light: $color-gray-light,
+  gray-dark: $color-gray-dark,
+  dark: $color-dark,
+  black: $color-black,
+  muted: $color-muted
+);
+
+//*========== Font and typography ==========*/
+
+//*.5rem = 8px | 1rem = 16px ...*/
+$font-body: 'Neue Helvetica', Arial, Roboto, sans-serif !default;
+
+$font-heading: 'Neue Helvetica', Arial, Roboto, sans-serif !default;
+
+$font-code: 'Courier New', 'DejaVu Sans Mono', 'Monaco', monospace !default;
+
+$font-alt: 'Red Hat Display', Arial, Roboto, sans-serif !default;
+
+$font-button: $font-body;
+
+$font-size-big: 4.5rem;
+$font-size-h1: 2.875rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 1.875rem;
+$font-size-h4: 1.5rem;
+$font-size-h5: 1.25rem;
+$font-size-h6: 1.1rem;
+$font-size-body: 1.1rem;
+$font-size-small: 0.8rem;
+$font-size-smaller: 0.7rem;
+
+$font-sizes: (
+  fs-big: $font-size-big,
+  fs-h1: $font-size-h1,
+  fs-h2: $font-size-h2,
+  fs-h3: $font-size-h3,
+  fs-h4: $font-size-h4,
+  fs-h5: $font-size-h5,
+  fs-h6: $font-size-h6,
+  fs-body: $font-size-body,
+  fs-s: $font-size-small,
+  fs-sr: $font-size-smaller
+);
+
+$line-height: 1.6;
+
+//*========== Font weight ==========*/
+$font-weight-light: 100;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 700;
+$font-weight-bold: 800;
+
+//*========== Border Radius ==========*/
+$border-radius: 18px;
+$border-radius-button: 16px;
+
+//*========== Header height ==========*/
+$header-height: 4rem;
+$logo-height: 40px;
+$hero-height: 40vh;
+
+//*========== Margenes ==========*/
+//*.5rem = 8px | 1rem = 16px ...*/
+$m-0-5: 0.5rem;
+$m-0-75: 0.75rem;
+$m-1: 1rem;
+$m-1-5: 1.5rem;
+$m-2: 2rem;
+$m-2-5: 2.5rem;
+$m-3: 3rem;
+
+//*========== z index ==========*/
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 999;
+
+//*========== Sizes ==========*/
+$sizes: (
+  '0': '0',
+  '0-5': '.5',
+  '1': '1',
+  '1-5': '1.5',
+  '2': '2',
+  '2-5': '2.5',
+  '3': '3'
+);
+
+//*========== Grids ==========*/
+$grid-columns: 12;
+$gap: 1rem;
+$gap-small: 0.7rem;
+$min-col-width: 15rem;
+
+//*========== Breakpoints map ==========*/
+$breakpoints: (
+  'small': 576px,
+  'medium': 768px,
+  'large': 992px,
+  'extra-large': 1200px
+) !default;
+
+$max-sm-width: 540px !default;
+$max-md-width: 720px !default;
+$max-lg-width: 960px !default;
+$max-width: 1334px !default;
+
+//map-get($breakpoints, small);
+//map-get($breakpoints, medium);
+//map-get($breakpoints, large);
+//map-get($breakpoints, extra-large);
+
+// @media (min-width: map-get($breakpoints, small)) { ... }
+// @media (min-width: map-get($breakpoints, medium)) { ... }
+// @media (min-width: map-get($breakpoints, large)) { ... }
+// @media (min-width: map-get($breakpoints, extra-large)) { ... }
+
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+$shadow: 0 1px 4px rgba($color-black, 0.16);

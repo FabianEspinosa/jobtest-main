@@ -1,0 +1,47 @@
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 580px;
+  margin: auto;
+  margin-bottom: 5rem;
+  gap: 0.5rem;
+  color: $color-gray;
+  @media (min-width: map-get($breakpoints, medium)) {
+    gap: 1rem;
+  }
+
+  > * {
+    flex: 1;
+  }
+
+  .big-text {
+    font-weight: $font-weight-bold;
+    font-family: $font-alt;
+    color: $color-gray;
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 5px;
+    margin-bottom: 0;
+    @media (min-width: map-get($breakpoints, medium)) {
+      font-size: var(--font-size-big);
+    }
+  }
+
+  &__block {
+    text-align: center;
+    &.seconds-c {
+      width: 200px;
+    }
+    span {
+      font-size: 14px;
+      font-family: $font-alt;
+      text-transform: uppercase;
+      color: $color-gray;
+
+      @media (min-width: map-get($breakpoints, medium)) {
+        font-size: var(--font-size-body);
+      }
+    }
+  }
+}

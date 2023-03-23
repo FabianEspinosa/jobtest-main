@@ -1,0 +1,111 @@
+/*=============== THEME DEFAULT ===============*/
+
+body {
+  background-image: url('../img/bg-top.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top center;
+}
+.main {
+  padding: $header-height 0 0 0;
+
+  &__vh {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+  }
+}
+
+.section {
+  padding: 3rem 0;
+
+  &__intro {
+    text-align: center;
+    margin: 0 !important;
+    padding: 0 !important;
+
+    &__suptitle {
+      color: $color-brand-blue;
+      font-size: 24px;
+      font-weight: $font-weight-semi-bold;
+      @media (min-width: map-get($breakpoints, medium)) {
+        font-size: var(--font-size-h2);
+      }
+    }
+
+    &__title {
+      font-size: 34px;
+      margin-bottom: 2rem;
+      @media (min-width: map-get($breakpoints, medium)) {
+        font-size: var(--font-size-big);
+      }
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+  }
+
+  &__video {
+    .video {
+      .alert {
+        position: absolute;
+        z-index: $z-modal;
+        top: 0;
+        display: none;
+
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+
+  &__questions {
+    background-image: url('../img/bg-questions.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom center;
+    &__title {
+      font-size: 20px;
+      margin-bottom: 1rem;
+      color: $color-brand-blue;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    &.answered {
+      .button__quiz {
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__countdown {
+    text-align: center;
+    background-image: url('../img/bg-bottom.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+
+    .container {
+      max-width: 800px;
+    }
+  }
+}
+
+#modal-intro .modal__content {
+  background-image: url('../img/bg-modal-intro.svg');
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center right -2rem;
+}
+
+.cc_dialog.simple {
+  max-width: 100% !important;
+}

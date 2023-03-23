@@ -1,0 +1,13 @@
+/*=============== CARD ===============*/
+
+.card {
+    display: flex;
+    padding: $m-1;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid $color-primary; 
+    border-radius: $border-radius;
+    transition: all .5s;
+    height: 100%;
+    font-weight: 600;
+}

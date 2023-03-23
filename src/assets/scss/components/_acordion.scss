@@ -1,0 +1,131 @@
+/*=============== ACORDION ===============*/
+
+.acordion {
+    background-color: $bg-button;
+
+    &__group {
+        display: grid;
+        row-gap: $gap;
+    }
+
+    &__item {
+        background-color: $bg-button;
+        border-radius: $border-radius;
+
+        &:hover {
+            background-color: $bg-button-hover;
+        }
+    }
+
+    &__item-title {
+        font-size: var(--font-size-h6);
+        font-weight: $font-weight-bold;
+        margin-bottom: 0;
+        color: $color-white;
+    }
+
+    &__description {
+        font-size: var(--font-size-body); 
+        padding: $m-1;
+        padding-top: 0;
+        margin-bottom: 0;
+        color: $color-white;
+        @media (min-width: map-get($breakpoints, medium)) { 
+            padding: $m-1-5; 
+            padding-top: 0;  
+        }
+
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+        column-gap: $gap;
+        padding: $m-1;
+        cursor: pointer;
+        &:hover {
+            .acordion__open {
+                transform: rotate(45deg);
+            }
+        }
+        @media (min-width: map-get($breakpoints, medium)) { 
+            padding: $m-1-5;  
+        }
+    }
+
+    &__content {
+        overflow: hidden;
+        height: 0;
+    }
+
+    &__item,
+    &__header,
+    &__item-title,
+    &__icon,
+    &__description,
+    &__content {
+        transition: .3s;
+    }
+
+
+    &__open {
+        position: relative;
+        cursor: pointer;
+        width: 15px;
+        height: 15px;
+        padding: 0.5em;
+        transition: all .2s;
+        border: 2px solid $color-white;
+        border-radius: 50%;
+        background-color: transparent;
+        aspect-ratio: 1/1;
+        @media (min-width: map-get($breakpoints, large)) { 
+            width: 30px;
+            height: 30px;   
+        }
+        &::after,
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            left: 7px;
+            top: 4px;
+            bottom: 4px;
+            background-color: #fff;
+            @media (min-width: map-get($breakpoints, large)) {
+                width: 2px;
+                left: 12px;
+                top: 5px;
+                bottom: 5px;
+            }
+
+        }
+
+        &::after {
+            transform: rotate(90deg);
+        }
+
+        &::before {
+            transform: rotate(180deg);
+        }
+
+        @media (min-width: map-get($breakpoints, medium)) {}
+    }
+}
+
+.acordion-open {
+
+    .acordion__header,
+    .acordion__content {}
+
+    .acordion__item-title,
+    .acordion__description {
+        color: $color-white;
+    }
+
+
+    .acordion__open {
+        transform: rotate(45deg);
+    }
+}

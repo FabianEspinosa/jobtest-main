@@ -1,0 +1,22 @@
+/*=============== VARIABLES CSS ===============*/ 
+:root {
+    //*.5rem = 8px | 1rem = 16px ...*/
+    --font-size-big: #{$font-size-big};
+    --font-size-h1: #{$font-size-h1};
+    --font-size-h2: #{$font-size-h2};
+    --font-size-h3: #{$font-size-h3};
+    --font-size-h4: #{$font-size-h4};
+    --font-size-h5: #{$font-size-h5};
+    --font-size-h6: #{$font-size-h6};
+    --font-size-body: #{$font-size-body};
+    --font-size-small: #{$font-size-small};
+    --font-size-smaller: #{$font-size-smaller};
+    //*.5rem = 8px | 1rem = 16px ...*/
+    --mb-0-5: #{$m-0-5};
+    --mb-0-75: #{$m-0-75}; 
+    --mb-1: #{$m-1};
+    --mb-1-5: #{$m-1-5}; 
+    --mb-2: #{$m-2};
+    --mb-2-5: #{$m-2-5}; 
+    --mb-3: #{$m-3}; 
+}

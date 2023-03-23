@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700&display=swap');
+
+/*
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 200;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/cc0b18f1-39d1-4580-b602-5a15f141c052.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/cc0b18f1-39d1-4580-b602-5a15f141c052.eot?#iefix") format("eot"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/685c012e-b603-41bb-9f76-d7e1cab76f53.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/0248a27d-0abf-4b74-a3c5-47a73e09098d.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/47657cdc-7580-4429-a42b-88917e1ee633.ttf") format("truetype"),
+    url("https://shared.bayer.com/fonts/western/0cb85325-f0de-4961-88cd-36759752dddc.svg#0cb85325-f0de-4961-88cd-36759752dddc")
+      format("svg");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 400;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/8827e223-8d96-4750-8b0c-8ef828fb1f0f.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/8827e223-8d96-4750-8b0c-8ef828fb1f0f.eot?#iefix") format("eot"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/0128d8b7-d00b-4315-8daa-970f97ecac64.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/803af1a9-a09b-4de5-ba36-e3d228fb5bc4.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/831880ae-4958-487d-bc2f-aa2c1a0636e7.ttf") format("truetype"),
+    url("https://shared.bayer.com/fonts/western/3513edb4-f4ad-4340-85e6-0cea8ca12237.svg#3513edb4-f4ad-4340-85e6-0cea8ca12237")
+      format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 600;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/285b0922-a3d2-4550-b29d-b4f74a9611e4.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/285b0922-a3d2-4550-b29d-b4f74a9611e4.eot?#iefix") format("eot"),
+    url("8https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/23e6839-53d8-41b9-a5a1-5f05833acd12.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/92679273-9798-4d27-893b-d53dfd2bb4c7.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/e4fb2994-44c3-40fe-bec7-9c4fa593b799.ttf") format("truetype"),
+    url("https://shared.bayer.com/fonts/western/ea22c7fc-8a36-484f-85e6-d014662a2273.svg#ea22c7fc-8a36-484f-85e6-d014662a2273")
+      format("svg");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 500;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/5abe98e8-3e80-4fd6-b27b-6ec4c6385461.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/5abe98e8-3e80-4fd6-b27b-6ec4c6385461.eot?#iefix") format("eot"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/c86f4d57-4caf-4c6f-9554-7926dd67e3f1.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/92c69f6c-0185-4eb2-800e-1ee3947ca4dd.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/e11c48d3-bed3-4b35-9d1e-1a5c7afe80e3.ttf") format("truetype"),
+    url("https://shared.bayer.com/fonts/western/394a4a67-cf1b-44ee-a02e-68dc9752d99e.svg#394a4a67-cf1b-44ee-a02e-68dc9752d99e")
+      format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 800;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/e276fe3d-01c5-4575-99f1-3fc0780d5417.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/e276fe3d-01c5-4575-99f1-3fc0780d5417.eot?#iefix") format("eot"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/a61c00c6-86e7-4fa9-ac6b-476548df9cb8.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/7fd00069-f615-471e-8089-b0bab013cfd9.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/7c110d92-b5c8-416b-b5c6-5f1d6c3a720a.ttf") format("truetype"),
+    url("https://shared.bayer.com/fonts/western/ee27a720-58cd-465f-b85c-1a5b5bdee597.svg#ee27a720-58cd-465f-b85c-1a5b5bdee597")
+      format("svg");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Neue Helvetica";
+  font-weight: 100;
+  font-style: normal;
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/418d2e49-6a65-426f-b58c-5f601f8557f1.eot?#iefix");
+  src: url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/418d2e49-6a65-426f-b58c-5f601f8557f1.eot?#iefix") format("eot"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/ec6281a0-c9c4-4477-a360-156acd53093f.woff2") format("woff2"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/11066b40-10f7-4123-ba58-d9cbf5e89ceb.woff") format("woff"),
+    url("https://www.bayer.com/themes/custom/bayer_cpa/fonts/neue-helvetica/cc9b0eb1-551c-4c84-b241-fc7934a0bd1d.ttf") format("truetype");
+}
+*/

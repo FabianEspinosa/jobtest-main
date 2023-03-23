@@ -1,0 +1,51 @@
+/*=============== CONTAINER ===============*/
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $m-1-5;
+    padding-right: $m-1-5;
+    width: 100%;
+
+    @media (min-width: map-get($breakpoints, small)) {
+        max-width: $max-sm-width;
+    }
+
+    @media (min-width: map-get($breakpoints, medium)) {
+        max-width: $max-md-width;
+    }
+
+    @media (min-width: map-get($breakpoints, large)) {
+        max-width: $max-lg-width;
+    }
+
+    @media (min-width: map-get($breakpoints, extra-large)) {
+        max-width: $max-width;
+    }
+
+    &-sm {
+        margin: 0 auto;
+        padding: 0 $m-1-5;
+        max-width: $max-sm-width;  
+    }
+
+    &-md {
+        margin: auto;
+        padding: 0 $m-1-5;
+        max-width: $max-md-width;  
+    }
+
+    &-lg {
+        margin: auto;
+        padding: 0 $m-1-5;
+        max-width: $max-lg-width;   
+    }
+
+    &-full {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: $m-1-5;
+        padding-right: $m-1-5;
+        width: 100%;
+    }
+}

@@ -1,0 +1,329 @@
+/*=============== HELPERS ===============*/
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+//Positions
+
+.position {
+  &-relative {
+    position: relative;
+  }
+
+  &-absolute {
+    position: absolute;
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  &-sticky {
+    position: sticky;
+  }
+}
+
+.mx-auto {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $name, $size in $sizes {
+  .gap-#{$name} {
+    gap: #{$size}rem !important;
+  }
+
+  .p-#{$name} {
+    padding: #{$size}rem !important;
+  }
+
+  .pt-#{$name} {
+    padding-top: #{$size}rem !important;
+  }
+
+  .pb-#{$name} {
+    padding-bottom: #{$size}rem !important;
+  }
+
+  .py-#{$name} {
+    padding-top: #{$size}rem !important;
+    padding-bottom: #{$size}rem !important;
+  }
+
+  .m-#{$name} {
+    margin: #{$size}rem !important;
+  }
+
+  .mt-#{$name} {
+    margin-top: #{$size}rem !important;
+  }
+
+  .mb-#{$name} {
+    margin-bottom: #{$size}rem !important;
+  }
+
+  .my-#{$name} {
+    margin-top: #{$size}rem !important;
+    margin-bottom: #{$size}rem !important;
+  }
+}
+
+@each $name, $font-size in $font-sizes {
+  .#{$name} {
+    font-size: #{$font-size};
+  }
+}
+
+.text {
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+
+  &-lowercase {
+    text-transform: lowercase;
+  }
+
+  &-capitalize {
+    text-transform: capitalize;
+  }
+
+  &-decoration-none {
+    text-decoration: none;
+  }
+}
+
+.letter {
+  &-spacing-1 {
+    letter-spacing: 1px;
+  }
+
+  &-spacing-2 {
+    letter-spacing: 2px;
+  }
+
+  &-spacing-3 {
+    letter-spacing: 3px;
+  }
+
+  &-spacing-4 {
+    letter-spacing: 4px;
+  }
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+@each $name, $color in $colors {
+  #{'.text-' + $name} {
+    color: #{$color} !important;
+  }
+}
+
+@each $name, $color in $colors {
+  #{'.bg-' + $name} {
+    background-color: #{$color} !important;
+  }
+}
+
+.video {
+  padding: 56.25% 0 0 0;
+  position: relative;
+
+  iframe,
+  .video-js {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.justify {
+  &-center {
+    justify-content: center;
+  }
+
+  &-left {
+    justify-left: left;
+  }
+
+  &-right {
+    justify-right: right;
+  }
+}
+
+.display {
+  &-center {
+    margin: center !important;
+  }
+
+  &-block {
+    display: block !important;
+  }
+
+  &-inline {
+    display: inline !important;
+  }
+
+  &-inline-block {
+    display: inline-block !important;
+  }
+
+  &-none {
+    display: none !important;
+  }
+
+  &-invisible {
+    visibility: hidden !important;
+  }
+
+  &-flex {
+    display: flex !important;
+  }
+
+  &-inline-flex {
+    display: inline-flex !important;
+  }
+
+  &-grid {
+    display: grid !important;
+  }
+
+  &-inline-grid {
+    display: inline-grid !important;
+  }
+
+  &-table {
+    display: table !important;
+  }
+}
+
+.centering {
+  display: grid;
+  place-content: center;
+
+  &-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.lead {
+  font-size: var(--font-size-h3);
+  font-weight: 100;
+  color: $color-text;
+}
+
+.is {
+  &-full-screen {
+    width: 100% !important;
+    min-height: 100vh;
+  }
+
+  &-full-width {
+    width: 100% !important;
+  }
+
+  &-vertical-align {
+    display: flex;
+    align-items: center;
+  }
+
+  &-horizontal-align {
+    display: flex;
+    justify-content: center;
+  }
+
+  &-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  &-fixed {
+    position: fixed;
+    width: 100%;
+  }
+
+  &-paddingless {
+    padding: 0 !important;
+  }
+
+  &-marginless {
+    margin: 0 !important;
+  }
+
+  &-pointer {
+    cursor: pointer !important;
+  }
+
+  &-rounded {
+    border-radius: 100%;
+  }
+
+  &-hidden {
+    display: none !important;
+  }
+}
+
+.font {
+  &-alt {
+    font-family: $font-alt;
+  }
+}
+
+.overlay-hidden {
+  overflow: hidden;
+}
+
+.icon-chevron--down {
+  @include chevron('bottom', 17px);
+}
+
+
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}

@@ -1,0 +1,122 @@
+/*=============== MODAL ===============*/
+
+.modal {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $bg-overlay;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    transition: all .3s;
+    z-index: $z-modal;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: all .3s;
+    backdrop-filter: blur(10px);
+
+    &__content {
+        display: none;
+        position: relative;
+        background-color: $color-white;
+        border: 2px solid $color-brand-green;
+        padding: $m-3;
+        border-radius: $border-radius*2; 
+        transition: all .3s;
+        margin: $m-1;
+        height: fit-content;
+
+        @media (min-width: map-get($breakpoints, large)) {
+            margin: auto;
+            width: $max-lg-width;
+        }
+
+        transform: scale(.5) translateY(100%);
+
+    }
+
+    &__full {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    &__close {
+        position: absolute;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+        padding: 0.5em;
+        top: 1rem;
+        right: 1rem;
+        transition: all .2s;
+        border: 2px solid $color-black;
+        background-color: transparent;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+        &::after, &::before  {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 2px;
+            left: 12px;
+            top: 5px;
+            bottom: 5px;
+            background-color: $color-black;
+        }
+
+        &::after  {  
+            transform: rotate(45deg);
+        }
+
+         &::before  {  
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            transform: rotate(90deg);
+            background-color: transparent;
+        }
+
+        @media (min-width: map-get($breakpoints, medium)) {
+
+        }
+    }
+
+    &__logo {
+        max-width: 75px;
+        height: auto;
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        font-size: var(--font-size-h4);
+        color: $color-brand-green;
+        margin-top: 0;
+        text-align: initial;
+    }
+
+    &__main {
+        overscroll-behavior-y: contain;
+        overflow-y: auto;
+        padding: 0 0 2rem 0;
+    }
+}
+
+.show-modal {
+    visibility: visible;
+    pointer-events: initial;
+    opacity: 1;
+
+    .modal__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transform: scale(1) translateY(0);
+    }
+}

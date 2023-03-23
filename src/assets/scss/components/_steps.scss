@@ -1,0 +1,143 @@
+.steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  z-index: $z-modal;
+  .step {
+    text-align: center;
+    position: relative;
+    &__line {
+    }
+    &__icon {
+      background-color: $color-gray-light;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      text-align: center;
+      line-height: 50px;
+      margin: auto;
+      margin-top: -25px;
+      margin-bottom: 15px;
+      color: $color-white;
+      font-size: 1.5rem;
+    }
+    &__image {
+      max-width: 60px;
+      height: 60px;
+      margin: auto;
+      margin-bottom: 15px;
+      filter: brightness(0) saturate(100%) invert(100%) sepia(0%)
+        saturate(6591%) hue-rotate(99deg) brightness(98%) contrast(61%);
+    }
+    &__title {
+      font-weight: $font-weight-semi-bold;
+      color: $color-gray-light;
+      margin-bottom: 0;
+    }
+    &__day {
+      color: $color-gray-light;
+    }
+
+    p {
+      line-height: 1.1;
+      font-size: var(--font-size-small);
+      @media (min-width: map-get($breakpoints, medium)) {
+        line-height: $line-height;
+        font-size: var(--font-size-body);
+      }
+    }
+
+    &.is-ok {
+      .step__icon {
+        cursor: pointer;
+      }
+    }
+
+    &.active {
+      .step__icon {
+        background-color: $color-brand-green;
+      }
+      .step__title {
+        color: $color-brand-blue;
+      }
+      .step__day {
+        color: $color-text;
+      }
+      .step__image {
+        filter: brightness(0) saturate(100%) invert(99%) sepia(72%)
+          saturate(1562%) hue-rotate(7deg) brightness(81%) contrast(93%);
+      }
+    }
+  }
+
+  &__bar {
+    background-color: $color-gray-light;
+    border-radius: 8px;
+    height: 14px;
+    left: 0;
+    position: absolute;
+    top: -7px;
+    width: 100%;
+
+    &::before {
+      content: '';
+      display: block;
+      height: 14px;
+      width: 0;
+      background-color: $color-brand-green;
+      border-radius: 8px;
+    }
+  }
+
+  &.active-1 {
+    .steps__bar {
+      &::before {
+        width: 25%;
+        background-color: $color-brand-green;
+      }
+    }
+
+    .step {
+      &:nth-child(2) {
+        .step__icon {
+          background-color: $color-brand-green;
+        }
+      }
+    }
+  }
+  &.active-2 {
+    .steps__bar {
+      &::before {
+        width: 75%;
+        background-color: $color-brand-green;
+      }
+    }
+
+    .step {
+      &:nth-child(2),
+      &:nth-child(3) {
+        .step__icon {
+          background-color: $color-brand-green;
+        }
+      }
+    }
+  }
+  &.active-3 {
+    .steps__bar {
+      &::before {
+        width: 100%;
+        background-color: $color-brand-green;
+      }
+    }
+    .step {
+      &:nth-child(2),
+      &:nth-child(3),
+      &:nth-child(4) {
+        .step__icon {
+          background-color: $color-brand-green;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+/*=============== FOOTER ===============*/
+
+.footer {
+    background-color: $bg-footer;
+    color: $color-text-footer; 
+    width: 100%;
+
+    @media (min-width: map-get($breakpoints, large)) {
+     
+    }
+
+    &__content {
+        font-size: var(--font-size-smaller);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+
+    &__social {
+        display: inline-flex;
+        column-gap: 2rem;
+
+        &-link {
+            font-size: var(--font-size-h3);
+            color: $color-link;
+            transition: .3s;
+
+            &:hover {
+                color: $color-link-hover;
+                transform: translateY(-.25rem);
+            }
+        }
+    }
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        gap: .5rem;
+        flex-direction: column;
+
+
+        @media (min-width: map-get($breakpoints, medium)) {
+            gap: 2rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+    }
+}
+
+
+

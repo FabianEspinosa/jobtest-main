@@ -1,0 +1,15 @@
+/*=============== HEADER ===============*/
+
+.header {
+    width: 100%;
+    background-color: $bg-header;
+    z-index: $z-fixed;
+    padding-top: 4rem;
+
+    &__logo {
+        margin: auto;
+        width: 100%;
+        max-width: 150px;
+        height: auto;
+    }
+}

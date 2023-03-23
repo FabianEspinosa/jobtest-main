@@ -1,0 +1,153 @@
+/*=============== BASE ===============*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, $header-height); 
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: $font-body;
+}
+
+body {
+  background-color: $bg-body; 
+  color: $color-text;
+  line-height: $line-height;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeSpeed;
+  transition: .4s; // For animation dark mode
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-heading;
+  color: $color-title;
+  font-weight: $font-weight-semi-bold;
+  line-height: 1;
+  margin-bottom: $m-1;
+  overflow-wrap: break-word;
+
+}
+
+p {
+  margin-bottom: $m-1;
+  line-height: $line-height;
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+ul ul {
+  list-style: circle inside;
+}
+
+ol {
+  list-style: decimal inside;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin: 1rem 0 1rem 2rem;
+}
+
+li,
+dt,
+dd {
+  margin-bottom: 1rem;
+}
+
+dt {
+  font-weight: $font-weight-semi-bold;
+}
+
+a {
+  color: $color-link; 
+  text-decoration: none;
+  transition: all .3s; 
+
+  &:hover {
+    color: $color-link-hover; 
+  }
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+small {
+  font-size: var(--font-size-small);
+}
+
+blockquote {
+  color: $color-gray-light;
+  margin-bottom: $m-1;
+  font-size: var(--font-size-h3);
+
+  p {
+    font-size: var(--font-size-h3);
+  }
+}
+
+hr {
+  margin-top: $m-3;
+  margin-bottom: $m-3;
+  border-width: 0;
+  border-top: 1px solid $color-light;
+}
+
+code {
+  font-family: $font-code;
+}

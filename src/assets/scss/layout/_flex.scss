@@ -1,0 +1,288 @@
+/*=============== FLEX ===============*/
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap-small;
+
+    &+.flex {
+        margin-top: $gap-small;
+    }
+
+    @media (min-width: map-get($breakpoints, medium)) {
+        gap: $gap;
+
+        &+.flex {
+            margin-top: $gap;
+        }
+    }
+
+    &>* {
+        flex: 1;
+    }
+}
+
+.flex-grid {
+    display: flex;
+    flex-flow: row wrap;
+    gap: $gap-small;
+
+    &+.flex-grid {
+        margin-top: $gap-small;
+    }
+
+    @media (min-width: map-get($breakpoints, medium)) {
+        gap: $gap;
+
+        &+.flex-grid {
+            margin-top: $gap;
+        }
+    }
+
+    &>* {
+        flex: 1 1 $min-col-width;
+    }
+}
+
+.flex {
+
+    &-row {
+        flex-direction: row
+    }
+
+    &-row-reverse {
+        flex-direction: row-reverse
+    }
+
+    &-column {
+        flex-direction: column
+    }
+
+    &-column-reverse {
+        flex-direction: column-reverse
+    }
+
+    &-align-stretch {
+        align-items: stretch;
+    }
+
+    &-align-start {
+        align-items: flex-start;
+    }
+
+    &-align-end {
+        align-items: flex-end;
+    }
+
+    &-align-baseline {
+        align-items: baseline;
+    }
+
+    &-align-center {
+        align-items: center;
+    }
+
+    &-justify-between {
+        justify-content: space-between;
+    }
+
+    &-justify-around {
+        justify-content: space-around;
+    }
+
+    &-justify-evenly {
+        justify-content: space-evenly;
+    }
+
+    &-justify-start {
+        justify-content: flex-start;
+    }
+
+    &-justify-end {
+        justify-content: flex-end;
+    }
+
+    &-justify-center {
+        justify-content: center;
+    }
+
+    &-wrap {
+        flex-wrap: wrap;
+    }
+
+    &-wrap-reverse {
+        flex-wrap: wrap-reverse;
+    }
+
+    &-no-wrap {
+        flex-wrap: nowrap;
+    }
+
+    &-content-center {
+        align-content: center;
+    }
+
+    &-content-start {
+        align-content: flex-start;
+    }
+
+    &-content-end {
+        align-content: flex-end;
+    }
+
+    &-content-between {
+        align-content: space-between;
+    }
+
+    &-content-around {
+        align-content: space-around;
+    }
+
+    &-content-evenly {
+        align-content: space-evenly;
+    }
+
+    &-content-stretch {
+        align-content: stretch
+    }
+
+    &-self-auto {
+        align-self: auto;
+    }
+
+    &-self-end {
+        align-self: flex-end;
+    }
+
+    &-self-start {
+        align-self: flex-start;
+    }
+
+    &-self-stretch {
+        align-self: stretch;
+    }
+
+    &-self-center {
+        align-self: center;
+    }
+
+    &-self-baseline {
+        align-self: baseline;
+    }
+
+    &-order-0 {
+        order: 0
+    }
+
+    &-order-1 {
+        order: 1
+    }
+
+    &-order-2 {
+        order: 2
+    }
+
+    &-order-3 {
+        order: 3
+    }
+
+    &-order-minus-1 {
+        order: -1
+    }
+
+    // Flex Width ( Basis | Shrink | Grow):
+    &-grow-0 {
+        flex-grow: 0
+    }
+
+    //default
+    &-grow-1 {
+        flex-grow: 1
+    }
+
+    &-grow-2 {
+        flex-grow: 2
+    }
+
+    &-grow-3 {
+        flex-grow: 3
+    }
+
+    // A flex-item is forced not to shrink
+    &-shrink-1 {
+        flex-shrink: 1
+    }
+
+    &-shrink-0 {
+        flex-shrink: 0
+    }
+
+    //Flex Grow and Shrink shortcuts
+    &-grow-0-shrink-1 {
+        flex-grow: 0;
+        flex-shrink: 1;
+    }
+
+    &-grow-1-shrink-0 {
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+
+    //values  10%, 20%, 25%, 30%, 33.33%, 40%, 50%, 60%, 66.67%, 70%, 75%, 80%, 90%, 100%
+    //FLEX WIDTH
+    &-basis-10-percent {
+        flex-basis: 10%
+    }
+
+    &-basis-20-percent {
+        flex-basis: 20%
+    }
+
+    &-basis-25-percent {
+        flex-basis: 25%
+    }
+
+    &-basis-30-percent {
+        flex-basis: 30%
+    }
+
+    &-basis-33-percent {
+        flex-basis: 33.33%
+    }
+
+    &-basis-40-percent {
+        flex-basis: 40%
+    }
+
+    &-basis-50-percent {
+        flex-basis: 50%
+    }
+
+    &-basis-60-percent {
+        flex-basis: 60%
+    }
+
+    &-basis-66-percent {
+        flex-basis: 66.67%
+    }
+
+    &-basis-70-percent {
+        flex-basis: 70%
+    }
+
+    &-basis-75-percent {
+        flex-basis: 75%
+    }
+
+    &-basis-80-percent {
+        flex-basis: 80%
+    }
+
+    &-basis-90-percent {
+        flex-basis: 90%
+    }
+
+    &-basis-100-percent {
+        flex-basis: 100%
+    }
+}

@@ -1,0 +1,7 @@
+.quiz {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  row-gap: 2rem;
+}/*# sourceMappingURL=quiz.css.map */

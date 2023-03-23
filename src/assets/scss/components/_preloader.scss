@@ -1,0 +1,66 @@
+/*=============== LOADER ===============*/
+
+.loader-wrapper {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    opacity: 1;
+    background: $bg-loader; 
+}
+
+
+.loader {
+    position: relative;
+    z-index: 1001;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 4px solid rgba($color-brand-blue, .2);
+    border-top-color: 4px solid $color-brand-blue;
+    border-right-color: 4px solid $color-brand-blue;
+    animation: loaderanimation 2s infinite linear;
+}
+
+
+@keyframes loaderanimation {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: $color-brand-blue;
+        border-right-color: $color-brand-blue;
+    }
+
+    50% {
+        transform: rotate(360deg);
+        border-top-color: $color-brand-green;
+        border-right-color: $color-brand-green;
+    }
+
+    100% {
+        transform: rotate(720deg);
+        border-top-color: $color-brand-blue;
+        border-right-color: $color-brand-blue;
+    }
+}
+
+.loaded {
+    .loader-wrapper {
+        //transform: translatex(-100%);
+        transition: all .7s ease-out;
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    .loader {
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+}
+
+.no-js .loader-wrapper {
+    display: none;
+}

@@ -6,6 +6,7 @@
         "phpoffice/phpspreadsheet": "^1.25",
         "symfony/var-dumper": "^5.4",
         "chillerlan/php-qrcode": "^3.4",
-        "icanboogie/inflector": "^2.2"
+        "icanboogie/inflector": "^2.2",
+        "respect/validation": "^2.0"
     }
 }

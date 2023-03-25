@@ -3,6 +3,7 @@
 namespace App\Controllers;
 
 use App\Model\User;
+use Respect\Validation\Validator;
 
 class UserController extends Controller
 {
@@ -51,5 +52,51 @@ class UserController extends Controller
     } catch (\Exception $e) {
       json(['message' => $e->getMessage()], $e->getCode());
     }
+  }
+
+  public function login()
+  {
+      try {
+          $request = get_object_vars($_POST);        
+  
+          // Validamos que se hayan enviado los campos necesarios
+          $validator = Validator::key('email', Validator::notEmpty()->email(), 'El campo email es requerido y debe ser un correo electrónico válido.')
+              ->key('password', Validator::notEmpty(), 'El campo password es requerido.');
+  
+          $validator->assert($request);
+  
+          // Buscamos el usuario en la base de datos
+          $user = new User();          
+          $user = $user->where('email', $request['email'])->first()->get();
+
+          // Verificamos si se encontró el usuario y si la contraseña coincide          
+          if (empty($user['id']) || !password_verify($request['password'], $user['password'])) {              
+              return json(['El email o el password no son correctos'], 422);
+          }
+  
+          // Generamos el token
+          $token = bin2hex(random_bytes(16)) . '|' . $user['id'];
+  
+          // Creamos el objeto de respuesta
+          $objeto = array(
+              "user" => array(
+                  "id" => $user['id'],
+                  "name" => $user['name'],
+                  "email" => $user['email']
+              ),
+              "token" => $token
+          );
+  
+          json($objeto, 200);
+      } catch (\Exception $e) {
+          json(['message' => $e->getMessage()], $e->getCode());
+      }
+  }
+  
+
+  public function logout()
+  {
+    session_destroy();
+    json('', 204);
   }
 }

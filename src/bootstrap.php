@@ -9,6 +9,15 @@ use Bramus\Router;
 
 session_start();
 
+// Agregar cabeceras de CORS
+function allowCORS()
+{
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE");
+    header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+}
+
+
 if (strpos($_SERVER['HTTP_HOST'], 'localhost') === false && (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] === "off")) {
     $location = 'https://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header('HTTP/1.1 301 Moved Permanently');
@@ -56,6 +65,8 @@ try {
     require ROOT_PATH . 'library/system/Loader.php';
     S\Loader::getInstance()->init();
     $router->setNamespace('\App\Controllers');
+    // Llamar a la función allowCORS()
+    allowCORS();
     $router->run();
 } catch (\Exception $oE) {
     echo $oE->getMessage();

@@ -87,7 +87,7 @@ class Model extends Engine
 
     public function makeQuery($action = 'find')
     {
-        $this->prepareFind();
+        $this->prepareFind();       
 
         $query = "SELECT ";
         if ($action == 'count') {
@@ -96,18 +96,18 @@ class Model extends Engine
             $query .= "* ";
         }
 
-        $query .= " FROM $this->table";
+        $query .= " FROM $this->table";        
 
         if ($this->where) {
             $query .= " WHERE " . implode(' AND ', $this->where);
         }
-
+        
         if ($action == 'find' && !is_null($this->start) && !is_null($this->limit)) {
             $query .= " LIMIT $this->start, $this->limit";
         }
-
+        
         $query = $this->db->query($query);
-
+        
         if ($action == 'count') {
             $items = $query->row['total'];
         } else {
@@ -116,11 +116,11 @@ class Model extends Engine
             } else {
                 $items = $query->row;
             }
-        }
+        }      
 
         $this->start = null;
         $this->limit = null;
-        $this->first = false;
+        $this->first = false;        
 
         return $items;
     }
@@ -145,7 +145,7 @@ class Model extends Engine
 
     public function get()
     {
-        $items = $this->makeQuery();
+        $items = $this->makeQuery(); 
         return $items;
     }
 
@@ -158,7 +158,7 @@ class Model extends Engine
 
     public function delete($id)
     {
-        $this->db->query('DELETE FROM $this->table WHERE id = $id LIMIT 1');
+        $this->db->query("DELETE FROM $this->table WHERE id = $id LIMIT 1");
     }
 
     public function setAttribute($key, $value)
@@ -206,7 +206,7 @@ class Model extends Engine
     {
         if (!$this->table) {
             trigger_error('No table defined');
-        }
+        }        
 
         $isNew = !!empty($this->attributes[$this->primary]);
 
@@ -252,13 +252,13 @@ class Model extends Engine
 
     public function where()
     {
-        $num_args = func_num_args();
+        $num_args = func_num_args();       
         $args = func_get_args();
 
         if ($num_args === 1) {
             $this->setWhere($this->primary, $this->getFilterColumn($this->primary, $args[0]));
             $this->first = true;
-        } elseif ($num_args === 2) {
+        } elseif ($num_args === 2) {               
             $this->setWhere($args[0], $this->getFilterColumn($args[0], $args[1]));
         } elseif ($num_args === 3) {
             if ($args[1] !== 'between') {
@@ -370,31 +370,31 @@ class Model extends Engine
             $value = $value_str;
         }
 
-        $this->where[] = $this->setField($key) . $value;
+        $this->where[] = $this->setField($key) . $value;            
 
         return $this;
     }
 
     protected function getFilterColumn($column, $value, $options = [])
     {
-        if (starts_with($column, $this->subtable . '.')) {
+        if (starts_with($column, $this->subtable . '.')) {          
             $column = substr($column, strlen($this->subtable . '.'));
         }
 
-        if (in_array($column, ['created_at', 'updated_at'])) {
+        if (in_array($column, ['created_at', 'updated_at'])) {       
             $this->columns[$column] = 'datetime';
         }
 
-        if ($column == $this->primary) {
+        if ($column == $this->primary) {       
             return "= '" . (int)$value . "'";
         }
 
-        if ($value === 'null') {
+        if ($value === 'null') {           
             return null;
         }
 
-        if (isset($this->columns[$column]) && !is_array($this->columns[$column])) {
-            if (!is_null($value)) {
+        if (isset($this->columns[$column]) && !is_array($this->columns[$column])) {   
+            if (!is_null($value)) {                
                 switch ($this->columns[$column]) {
                     case 'string':
                         if (is_array($value)) {
@@ -413,7 +413,7 @@ class Model extends Engine
                             } else {
                                 $value = "= '" . $this->db->escape(trim((string)$value)) . "'";
                             }
-                        }
+                        }                     
                         break;
                     case 'float':
                         $value = (float)$value;
@@ -483,7 +483,7 @@ class Model extends Engine
                 }
             }
 
-            return $value;
+            return $value;            
         }
 
         return null;
